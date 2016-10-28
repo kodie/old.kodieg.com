@@ -1,0 +1,153 @@
+$black: #191919;
+$blue: #0645AD;
+$gray: #CECDCD;
+$gray2: #919090;
+$gray3: #333333;
+
+$desktop-min: 800px;
+$mobile-max: ($desktop-min - 1);
+
+$fa-font-path: '../fonts';
+@import 'font-awesome';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $black;
+  background-image: url('../img/wallpaper.jpg');
+  background-repeat: repeat;
+  color: $gray3;
+  display: block;
+  font-family: verdana;
+  font-size: .8em;
+  text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+
+  @media (min-width: $desktop-min) {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+}
+
+::selection {
+  background: lighten($blue, 50%);
+}
+
+a, a:link, a:active, a:visited {
+  color: $blue;
+}
+
+a:hover {
+  color: $black;
+}
+
+p:not(:last-of-type) {
+  margin-bottom: 1em;
+}
+
+ul li {
+  margin-left: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.cf:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.window {
+  background-color: $gray;
+  border: 1px solid $gray2;
+  border-radius: 4px;
+  box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, .75);
+  display: inline-block;
+  margin: 10px;
+
+  @media (max-width: $mobile-max) {
+    display: block !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    position: relative !important;
+    width: auto !important;
+  }
+
+  @media (min-width: $desktop-min) {
+    max-width: 500px;
+    min-width: 200px;
+  }
+
+  .handle {
+    background-color: $gray;
+    background-image: linear-gradient($gray2, $gray);
+    cursor: move;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    user-select: none;
+
+    > span {
+      display: inline-block;
+
+      &:first-of-type {
+        padding: 0 5px;
+        position: absolute;
+        left: 0;
+      }
+
+      &:last-of-type {
+        padding: 0 5px;
+        position: absolute;
+        right: 0;
+      }
+
+      &.title {
+        max-width: 50%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &.icon i {
+        padding: 0 5px;
+      }
+
+      &.controls {
+        cursor: default;
+
+        i:hover {
+          color: $gray2;
+        }
+      }
+    }
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
+
+.window.links {
+  cursor: default;
+  user-select: none;
+}
+
+.icon-list {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.profile-img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
