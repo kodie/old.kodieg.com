@@ -75,20 +75,20 @@ gulp.task('styles', function() {
 });
 
 gulp.task('min-styles', function() {
-  return gulp.src(destPaths.styles + '/**/*{,!.min}.css')
-    .pipe(cleanCSS({keepSpecialComments: 0}))
-    // Un-comment this to make seperate .min files
-    //.pipe(rename(function(path) {
-    //  path.basename = path.basename + '.min';
-    //}))
-    .pipe(gulp.dest(destPaths.styles));
+	return gulp.src(destPaths.styles + '/**/*{,!.min}.css')
+		.pipe(cleanCSS({keepSpecialComments: 0}))
+		// Un-comment this to make seperate .min files
+		//.pipe(rename(function(path) {
+		//  path.basename = path.basename + '.min';
+		//}))
+		.pipe(gulp.dest(destPaths.styles));
 });
 
 gulp.task('scripts', function() {
-  var files = bowerFiles('**/*.js', {includeSelf:true});
-  files.push(paths.scripts);
+	var files = bowerFiles('**/*.js', {includeSelf:true});
+	files.push(paths.scripts);
 	return gulp.src(files)
-    // Un-comment this to turn on js error reporting in the console
+		// Un-comment this to turn on js error reporting in the console
 		//.pipe(jshint())
 		//.pipe(jshint.reporter('default'))
 		.pipe(concat('main.js'))
@@ -96,13 +96,13 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('min-scripts', function() {
-  return gulp.src(destPaths.scripts + '/**/*{,!.min}.js')
-    .pipe(uglify())
-    // Un-comment this to make seperate .min files
-    //.pipe(rename(function(path) {
-    //  path.basename = path.basename + '.min';
-    //}))
-    .pipe(gulp.dest(destPaths.scripts));
+	return gulp.src(destPaths.scripts + '/**/*{,!.min}.js')
+		.pipe(uglify())
+		// Un-comment this to make seperate .min files
+		//.pipe(rename(function(path) {
+		//  path.basename = path.basename + '.min';
+		//}))
+		.pipe(gulp.dest(destPaths.scripts));
 });
 
 gulp.task('images', function() {
