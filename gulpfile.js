@@ -48,7 +48,7 @@ var ftpConfig = {
 };
 
 gulp.task('bower', function() {
-  return bower();
+	return bower();
 });
 
 gulp.task('css-to-scss', function() {
