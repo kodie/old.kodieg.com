@@ -27,9 +27,9 @@ function win($content, $title, $icon = null, $classes = null, $style = null) {
   $style = array_to_css($style);
 
   echo strtr($window_template, array(
-  	'[%%content%%]'  => $content,
-  	'[%%title%%]'    => $title,
-  	'[%%icon%%]'     => $icon,
+    '[%%content%%]'  => $content,
+    '[%%title%%]'    => $title,
+    '[%%icon%%]'     => $icon,
     '[%%style%%]'    => $style,
     '[%%classes%%]'  => $classes
   ));
