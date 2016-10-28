@@ -32,7 +32,7 @@ var destPaths = {
 };
 
 var ftpConfig = {
-	remoteDir: 'public_html/test',
+	remoteDir: 'public_html',
 	files: [
 		'./build/**/*',
 		'./resume/**/*',
