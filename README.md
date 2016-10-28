@@ -1,4 +1,4 @@
-# ![](/assets/img/favicon.png?raw=true) [kodieg.com](http://kodieg.com)
+# [kodieg.com](http://kodieg.com)
 This is my personal website complete with copies of my resume and links to my various social networks. :sunglasses:
 
 ### Build
