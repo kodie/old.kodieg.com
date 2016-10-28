@@ -16,4 +16,4 @@ gulp bs --proxy=http://kodieg.localhost
 ```
 gulp deploy --host=FTP_HOST --port=FTP_PORT --user=FTP_USER --pass=FTP_PASSWORD
 ```
-*To change which files are deploed to the server, edit the `ftpConfig.files` glob array inside of `gulpfile.js`.*
+*To change which files are deployed to the server, edit the `ftpConfig.files` glob array inside of `gulpfile.js`.*
