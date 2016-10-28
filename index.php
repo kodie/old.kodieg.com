@@ -49,6 +49,8 @@
   </ul>
 <?php win(ob_get_clean(), 'Projects', 'thumbs-up', 'projects', null); ?>
 
+<a class="github-fork-ribbon" href="https://github.com/kodie/kodieg.com" title="Check me out on GitHub!">Check me out on GitHub!</a>
+
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
 var sc_project=9355837;

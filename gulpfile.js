@@ -75,8 +75,8 @@ gulp.task('styles', function() {
 });
 
 gulp.task('min-styles', function() {
-  return gulp.src(destPaths.styles + '/**/*{!.min}.js')
-    .pipe(cleanCSS())
+  return gulp.src(destPaths.styles + '/**/*{,!.min}.css')
+    .pipe(cleanCSS({keepSpecialComments: 0}))
     // Un-comment this to make seperate .min files
     //.pipe(rename(function(path) {
     //  path.basename = path.basename + '.min';
@@ -96,7 +96,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('min-scripts', function() {
-  return gulp.src(destPaths.scripts + '/**/*{!.min}.js')
+  return gulp.src(destPaths.scripts + '/**/*{,!.min}.js')
     .pipe(uglify())
     // Un-comment this to make seperate .min files
     //.pipe(rename(function(path) {
