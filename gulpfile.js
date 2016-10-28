@@ -79,7 +79,7 @@ gulp.task('min-styles', function() {
 		.pipe(cleanCSS({keepSpecialComments: 0}))
 		// Un-comment this to make seperate .min files
 		//.pipe(rename(function(path) {
-		//  path.basename = path.basename + '.min';
+		//	path.basename = path.basename + '.min';
 		//}))
 		.pipe(gulp.dest(destPaths.styles));
 });
@@ -87,6 +87,7 @@ gulp.task('min-styles', function() {
 gulp.task('scripts', function() {
 	var files = bowerFiles('**/*.js', {includeSelf:true});
 	files.push(paths.scripts);
+	
 	return gulp.src(files)
 		// Un-comment this to turn on js error reporting in the console
 		//.pipe(jshint())
@@ -100,7 +101,7 @@ gulp.task('min-scripts', function() {
 		.pipe(uglify())
 		// Un-comment this to make seperate .min files
 		//.pipe(rename(function(path) {
-		//  path.basename = path.basename + '.min';
+		//	path.basename = path.basename + '.min';
 		//}))
 		.pipe(gulp.dest(destPaths.scripts));
 });
