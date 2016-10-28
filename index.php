@@ -5,8 +5,8 @@
   <title>Kodie Grantham</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="build/img/favicon.png" rel="icon" type="image/png">
-  <link href="build/css/main.css?ver=<?php echo time(); ?>" rel="stylesheet" type="text/css">
-  <script src="build/js/main.js?ver=<?php echo time(); ?>" type="text/javascript"></script>
+  <link href="build/css/main.css?ver=<?php echo filemtime('build/css/main.css'); ?>" rel="stylesheet" type="text/css">
+  <script src="build/js/main.js?ver=<?php echo filemtime('build/js/main.js'); ?>" type="text/javascript"></script>
 </head>
 <body>
 
