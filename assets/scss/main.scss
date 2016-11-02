@@ -7,8 +7,6 @@ $gray3: #333333;
 $desktop-min: 800px;
 $mobile-max: ($desktop-min - 1);
 
-$fa-font-path: '../fonts';
-
 @import 'font-awesome.scss';
 @import 'gh-fork-ribbon.scss';
 
