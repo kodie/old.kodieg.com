@@ -36,7 +36,8 @@ var ftpConfig = {
 	files: [
 		'./build/**/*',
 		'./resume/**/*',
-		'./*.php'
+		'./*.php',
+		'./.htaccess'
 	],
 	creds: {
 		host: argv.host,
@@ -87,7 +88,7 @@ gulp.task('min-styles', function() {
 gulp.task('scripts', function() {
 	var files = bowerFiles('**/*.js', {includeSelf:true});
 	files.push(paths.scripts);
-	
+
 	return gulp.src(files)
 		// Un-comment this to turn on js error reporting in the console
 		//.pipe(jshint())

@@ -8,4 +8,4 @@ Redirect /projects/adbuix http://forum.xda-developers.com/showthread.php?t=64138
 Redirect /dl/adbuix_0_1_1.deb http://kodieg.com
 Redirect /dl/adbuixupdate.sh http://kodieg.com
 
-ErrorDocument 404 /
+ErrorDocument 404 http://kodieg.com
