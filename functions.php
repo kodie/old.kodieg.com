@@ -37,10 +37,10 @@ function win($content, $title, $icon = null, $classes = null, $style = null) {
 
 function array_to_css($array) {
   if (!is_array($array) || !count($array)) { return ""; }
-	$css = "";
-	foreach ((array) $array as $property => $style) {
-		$css .= "$property:$style;";
-	}
-	return $css;
+  $css = "";
+  foreach ((array) $array as $property => $style) {
+  	$css .= "$property:$style;";
+  }
+  return $css;
 }
 ?>
