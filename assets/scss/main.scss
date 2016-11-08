@@ -152,6 +152,10 @@ img {
   width: 150px;
 }
 
-.github-fork-ribbon:before {
-  background-color: $gray3;
+.github-fork-ribbon {
+  position: fixed;
+
+  &:before {
+    background-color: $gray3;
+  }
 }
